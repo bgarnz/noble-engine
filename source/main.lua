@@ -2,17 +2,50 @@ import 'libraries/noble/Noble'
 
 import 'utilities/Utilities'
 
-import 'scenes/ExampleScene'
-import 'scenes/ExampleScene2'
+import 'scenes/PlayVNDemo'
 
-Noble.Settings.setup({
-	Difficulty = "Medium"
-})
+Noble.GameData.setup(
+	{
+		gdbackground = "",
+		gdleftpeep = "",
+		gdmiddlepeep = "",
+		gdrightpeep = "",
+		gdwhichpeep = "",
+		gdleftpeepflip = "",
+		gdmiddlepeepflip = "",
+		gdrightpeepflip = "",
+		gdbgm = "",
+		gdbgmidi = "",
+		gdsfx = "",
+		gdline = "1",
+		gdvariables = "",
+		gdoverlay = "",
+		ldbackground = "",
+		ldleftpeep = "",
+		ldmiddlepeep = "",
+		ldrightpeep = "",
+		ldwhichpeep = "",
+		ldleftpeepflip = "",
+		ldmiddlepeepflip = "",
+		ldrightpeepflip = "",
+		ldbgm = "",
+		ldbgmidi = "",
+		ldsfx = "",
+		ldline = "1",
+		ldvariables = "",
+		ldoverlay = ""
+	},
+	1,
+	true,
+	true
+)
 
-Noble.GameData.setup({
-	Score = 0
-})
+leftpeepoffset = 100		
+middlepeepoffset = 200		
+rightpeepoffset = 300
+pressastate = 1
+savetemp = {}
 
-Noble.showFPS = true
+Noble.showFPS = false
 
-Noble.new(ExampleScene)
+Noble.new(PlayVNDemo, 1.5, Noble.Transition.CrossDissolve)
